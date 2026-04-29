@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #6366f1;
+  --primary-light: #818cf8;
+  --bg-dark: #0f172a;
+  --bg-card: #1e293b;
+  --bg-input: #334155;
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --border: #475569;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', 'Noto Sans SC', system-ui, sans-serif;
+  background: var(--bg-dark);
+  color: var(--text-primary);
+  min-height: 100vh;
+}
+
+/* 自定义滚动条 */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-dark); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-secondary); }
+
+/* Element Plus 暗色覆盖 */
+.el-card { background: var(--bg-card) !important; border-color: var(--border) !important; color: var(--text-primary) !important; }
+.el-dialog { background: var(--bg-card) !important; }
+.el-form-item__label { color: var(--text-secondary) !important; }
+.el-input__wrapper { background: var(--bg-input) !important; box-shadow: none !important; border: 1px solid var(--border) !important; }
+.el-input__inner { color: var(--text-primary) !important; }
+.el-textarea__inner { background: var(--bg-input) !important; color: var(--text-primary) !important; border-color: var(--border) !important; }
+.el-select .el-input__wrapper { background: var(--bg-input) !important; }
+.el-table { background: var(--bg-card) !important; --el-table-bg-color: var(--bg-card) !important; --el-table-tr-bg-color: var(--bg-card) !important; --el-table-header-bg-color: #1a2332 !important; --el-table-row-hover-bg-color: #2a3a4e !important; --el-table-text-color: var(--text-primary) !important; --el-table-header-text-color: var(--text-secondary) !important; --el-table-border-color: var(--border) !important; }
+.el-button--primary { background: var(--primary) !important; border-color: var(--primary) !important; }
+.el-button--primary:hover { background: var(--primary-light) !important; border-color: var(--primary-light) !important; }
+.el-tag { border-color: var(--border) !important; }
+.el-menu { background: var(--bg-card) !important; border-color: var(--border) !important; }
+.el-menu-item { color: var(--text-secondary) !important; }
+.el-menu-item.is-active { color: var(--primary-light) !important; background: rgba(99, 102, 241, 0.1) !important; }
+.el-notification { background: var(--bg-card) !important; border-color: var(--border) !important; }
+.el-notification__title { color: var(--text-primary) !important; }
+.el-notification__content { color: var(--text-secondary) !important; }
