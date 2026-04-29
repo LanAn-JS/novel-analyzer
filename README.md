@@ -29,6 +29,12 @@ AI驱动的小说分析工具，支持多格式上传、智能分析、语义搜
 - Python 3.10+
 - Node.js 18+（仅首次构建前端需要）
 
+### 首次安装
+```bash
+./install.sh
+```
+安装脚本会自动：创建虚拟环境、安装依赖、部署Embedding模型、初始化数据目录。
+
 ### GPU加速（可选）
 有NVIDIA GPU的系统可安装GPU加速依赖，向量嵌入速度提升 **10-15倍**：
 ```bash
@@ -55,9 +61,6 @@ pip install -r backend/requirements-gpu.txt
 ```
 
 启动后自动打开浏览器访问 http://localhost:8989
-
-### 桌面快捷方式（Linux）
-双击 `Novel-Analyzer.desktop` 文件即可启动。
 
 ---
 
@@ -143,7 +146,7 @@ curl -X POST http://localhost:8989/api/providers/ \
 Novel Analyzer/
 ├── start.sh              # 一键启动脚本
 ├── stop.sh               # 停止脚本
-├── Novel-Analyzer.desktop # Linux桌面快捷方式
+├── install.sh            # 首次安装脚本
 ├── README.md
 ├── LICENSE
 ├── backend/
